@@ -1,0 +1,156 @@
+aid: luma-labs
+name: Luma AI
+description: >-
+  Luma AI is a generative media company best known for Dream Machine, a
+  family of image and video models including Ray (video), Photon and
+  Photon Flash (image). The Dream Machine API gives developers access to
+  text-to-video, image-to-video, image generation, upscaling, video
+  modification with style transfer, reframing, audio attachment, and
+  concept controls. Luma serves creators, agencies, and product teams
+  building generative media features, and monetizes through consumer
+  subscription tiers (Plus, Pro, Ultra), team and enterprise plans, and a
+  credit-based developer API.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Artificial Intelligence
+  - Generative AI
+  - Video
+  - Image
+  - Text To Video
+  - Image To Video
+  - Upscaling
+  - Reframing
+  - Dream Machine
+  - Ray
+  - Photon
+  - Creative Tools
+url: https://raw.githubusercontent.com/api-evangelist/luma-labs/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: luma-labs:dream-machine-api
+    name: Luma Dream Machine API
+    description: >-
+      The Dream Machine API exposes Luma's Ray and Photon model families for
+      programmatic image and video generation. It provides endpoints for
+      creating, listing, retrieving, and deleting generations, generating
+      images, upscaling, modifying video with style transfer, reframing,
+      attaching audio, and checking credits. SDKs for Python and JavaScript
+      wrap the REST API.
+    humanURL: https://docs.lumalabs.ai/
+    baseURL: https://api.lumalabs.ai/dream-machine/v1
+    tags:
+      - Generative AI
+      - Video
+      - Image
+      - Upscaling
+      - Reframing
+      - Style Transfer
+    properties:
+      - type: Documentation
+        url: https://docs.lumalabs.ai/
+      - type: GettingStarted
+        url: https://docs.lumalabs.ai/docs/welcome
+      - type: SignUp
+        url: https://lumalabs.ai/dream-machine/api/keys
+      - type: API
+        url: https://docs.lumalabs.ai/docs/api
+      - type: SDK
+        url: https://github.com/lumalabs/lumaai-python
+      - type: SDK
+        url: https://github.com/lumalabs/lumaai-node
+      - type: Pricing
+        url: https://www.lumalabs.ai/pricing
+      - type: Authentication
+        url: https://docs.lumalabs.ai/docs/authentication
+    features:
+      - name: Create Generation
+        description: >-
+          Submit prompts to initiate text-to-video or image-to-video jobs
+          using Ray model variants.
+      - name: Image Generation
+        description: >-
+          Generate still images with Photon and Photon Flash from text
+          prompts.
+      - name: Upscaling
+        description: >-
+          Upscale generations up to 4K resolution.
+      - name: Modify Video
+        description: >-
+          Apply style transfer and prompt-based editing to existing video.
+      - name: Reframe
+        description: >-
+          Adjust aspect ratio and framing of images and videos by ID.
+      - name: Add Audio
+        description: >-
+          Attach generated or user-provided audio to existing generations.
+      - name: List and Filter Generations
+        description: >-
+          Retrieve generations with optional filtering and sorting.
+      - name: Credits and Billing
+        description: >-
+          Query account credit balance and manage usage.
+      - name: Webhooks
+        description: >-
+          Receive callbacks when generations complete and on credit-balance
+          events.
+      - name: Concepts
+        description: >-
+          Access curated creative concepts to steer generation.
+    useCases:
+      - name: Generative Video Products
+        description: >-
+          Build consumer or prosumer apps powered by Dream Machine video
+          models.
+      - name: Marketing Creative Pipelines
+        description: >-
+          Automate variant creation of video and image ad assets.
+      - name: Agentic Media Generation
+        description: >-
+          Let AI agents request and remix generative media via the API.
+      - name: 3D and Visual Effects
+        description: >-
+          Use Luma's capture technology pipeline as part of post-production.
+      - name: Personalization
+        description: >-
+          Generate per-user video and image content for campaigns and
+          experiences.
+    integrations:
+      - name: Python
+      - name: JavaScript
+      - name: Node.js
+      - name: Webhooks
+      - name: Discord
+    authentication:
+      - type: API Key
+        description: >-
+          API keys are generated at lumalabs.ai/dream-machine/api/keys and
+          passed as a Bearer token in the Authorization header.
+common:
+  - type: Website
+    url: https://lumalabs.ai
+  - type: Documentation
+    url: https://docs.lumalabs.ai
+  - type: Blog
+    url: https://lumalabs.ai/blog
+  - type: GitHubOrganization
+    url: https://github.com/lumalabs
+  - type: Pricing
+    url: https://lumalabs.ai/pricing
+  - type: TermsOfService
+    url: https://lumalabs.ai/legal/tos
+  - type: PrivacyPolicy
+    url: https://lumalabs.ai/legal/privacy-policy
+  - type: X
+    url: https://x.com/LumaLabsAI
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/luma-ai
+  - type: Discord
+    url: https://discord.gg/lumalabs
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

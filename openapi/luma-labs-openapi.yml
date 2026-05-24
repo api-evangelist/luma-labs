@@ -1,0 +1,245 @@
+openapi: 3.1.0
+info:
+  title: Luma Dream Machine API
+  description: |
+    REST API for Luma's Dream Machine generative video and image platform.
+    Exposes Ray (video) and Photon (image) model families with endpoints for
+    creating, listing, retrieving, and deleting generations, plus upscaling,
+    style-transfer modification, reframing, audio attachment, concepts, and
+    credit balance.
+    Authentication uses Bearer tokens obtained from
+    https://lumalabs.ai/dream-machine/api/keys.
+  version: "1.0"
+  contact:
+    name: Luma Labs
+    url: https://docs.lumalabs.ai/
+  license:
+    name: Proprietary
+    url: https://lumalabs.ai/legal/tos
+servers:
+  - url: https://api.lumalabs.ai/dream-machine/v1
+    description: Dream Machine API
+security:
+  - BearerAuth: []
+tags:
+  - name: Generations
+  - name: Image
+  - name: Video
+  - name: Concepts
+  - name: Credits
+  - name: System
+paths:
+  /generations:
+    get:
+      tags: [Generations]
+      summary: List generations
+      operationId: listGenerations
+      parameters:
+        - name: limit
+          in: query
+          schema: { type: integer }
+        - name: offset
+          in: query
+          schema: { type: integer }
+      responses:
+        '200':
+          description: A page of generations
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Generations]
+      summary: Retrieve a generation
+      operationId: getGeneration
+      responses:
+        '200':
+          description: A generation
+          content:
+            application/json:
+              schema: { type: object }
+    delete:
+      tags: [Generations]
+      summary: Delete a generation
+      operationId: deleteGeneration
+      responses:
+        '204':
+          description: Generation deleted
+  /generations/video:
+    post:
+      tags: [Video]
+      summary: Create a video generation
+      operationId: createVideoGeneration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt: { type: string }
+                model: { type: string }
+                aspect_ratio: { type: string }
+                loop: { type: boolean }
+                keyframes: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/video/modify:
+    post:
+      tags: [Video]
+      summary: Modify a video with style transfer
+      operationId: modifyVideo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/video/reframe:
+    post:
+      tags: [Video]
+      summary: Reframe a video
+      operationId: reframeVideo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/image:
+    post:
+      tags: [Image]
+      summary: Create an image generation
+      operationId: createImageGeneration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt: { type: string }
+                model: { type: string }
+                aspect_ratio: { type: string }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/image/reframe:
+    post:
+      tags: [Image]
+      summary: Reframe an image
+      operationId: reframeImage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/{id}/upscale:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Generations]
+      summary: Upscale a generation
+      operationId: upscaleGeneration
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/{id}/audio:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Generations]
+      summary: Add audio to a generation
+      operationId: addAudio
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { type: object }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: { type: object }
+  /generations/concepts/list:
+    get:
+      tags: [Concepts]
+      summary: List available concepts
+      operationId: listConcepts
+      responses:
+        '200':
+          description: A list of concepts
+          content:
+            application/json:
+              schema: { type: object }
+  /credits:
+    get:
+      tags: [Credits]
+      summary: Retrieve credit balance
+      operationId: getCredits
+      responses:
+        '200':
+          description: Credit balance
+          content:
+            application/json:
+              schema: { type: object }
+  /ping:
+    get:
+      tags: [System]
+      summary: Health check
+      operationId: ping
+      responses:
+        '200':
+          description: Pong
+          content:
+            application/json:
+              schema: { type: object }
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

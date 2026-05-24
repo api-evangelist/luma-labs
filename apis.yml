@@ -151,6 +151,8 @@ common:
     url: https://www.linkedin.com/company/luma-ai
   - type: Discord
     url: https://discord.gg/lumalabs
+  - type: LLMsTxt
+    url: https://docs.lumalabs.ai/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

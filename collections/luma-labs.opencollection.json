@@ -1,0 +1,275 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Luma Dream Machine API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Generations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List generations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List generations"
+        },
+        {
+          "info": {
+            "name": "Retrieve a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a generation"
+        },
+        {
+          "info": {
+            "name": "Delete a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a generation"
+        },
+        {
+          "info": {
+            "name": "Upscale a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id/upscale",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upscale a generation"
+        },
+        {
+          "info": {
+            "name": "Add audio to a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id/audio",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add audio to a generation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Video",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a video generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a video generation"
+        },
+        {
+          "info": {
+            "name": "Modify a video with style transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video/modify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Modify a video with style transfer"
+        },
+        {
+          "info": {
+            "name": "Reframe a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video/reframe",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Reframe a video"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Image",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an image generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/image",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an image generation"
+        },
+        {
+          "info": {
+            "name": "Reframe an image",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/image/reframe",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Reframe an image"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Concepts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available concepts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/concepts/list"
+          },
+          "docs": "List available concepts"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Credits",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve credit balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/credits"
+          },
+          "docs": "Retrieve credit balance"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "System",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Health check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/ping"
+          },
+          "docs": "Health check"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

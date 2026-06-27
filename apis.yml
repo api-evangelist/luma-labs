@@ -55,13 +55,13 @@ apis:
         url: https://docs.lumalabs.ai/
       - type: GettingStarted
         url: https://docs.lumalabs.ai/docs/welcome
-      - type: SignUp
+      - type: Signup
         url: https://lumalabs.ai/dream-machine/api/keys
       - type: API
         url: https://docs.lumalabs.ai/docs/api
-      - type: SDK
+      - type: SDKs
         url: https://github.com/lumalabs/lumaai-python
-      - type: SDK
+      - type: SDKs
         url: https://github.com/lumalabs/lumaai-node
       - type: Pricing
         url: https://www.lumalabs.ai/pricing
@@ -151,7 +151,7 @@ common:
     url: https://www.linkedin.com/company/luma-ai
   - type: Discord
     url: https://discord.gg/lumalabs
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.lumalabs.ai/llms.txt
 maintainers:
   - FN: Kin Lane

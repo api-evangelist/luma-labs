@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/luma-labs-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: API Key
+  sources:
+  - openapi/luma-labs-openapi.yml

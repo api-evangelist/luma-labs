@@ -131,6 +131,10 @@ apis:
           API keys are generated at lumalabs.ai/dream-machine/api/keys and
           passed as a Bearer token in the Authorization header.
 common:
+  - type: DomainSecurity
+    url: security/luma-labs-domain-security.yml
+  - type: Authentication
+    url: authentication/luma-labs-authentication.yml
   - type: Website
     url: https://lumalabs.ai
   - type: Documentation

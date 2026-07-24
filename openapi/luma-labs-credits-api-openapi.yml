@@ -1,0 +1,52 @@
+openapi: 3.1.0
+info:
+  title: Luma Dream Machine Concepts Credits API
+  description: 'REST API for Luma''s Dream Machine generative video and image platform.
+
+    Exposes Ray (video) and Photon (image) model families with endpoints for
+
+    creating, listing, retrieving, and deleting generations, plus upscaling,
+
+    style-transfer modification, reframing, audio attachment, concepts, and
+
+    credit balance.
+
+    Authentication uses Bearer tokens obtained from
+
+    https://lumalabs.ai/dream-machine/api/keys.
+
+    '
+  version: '1.0'
+  contact:
+    name: Luma Labs
+    url: https://docs.lumalabs.ai/
+  license:
+    name: Proprietary
+    url: https://lumalabs.ai/legal/tos
+servers:
+- url: https://api.lumalabs.ai/dream-machine/v1
+  description: Dream Machine API
+security:
+- BearerAuth: []
+tags:
+- name: Credits
+paths:
+  /credits:
+    get:
+      tags:
+      - Credits
+      summary: Retrieve credit balance
+      operationId: getCredits
+      responses:
+        '200':
+          description: Credit balance
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

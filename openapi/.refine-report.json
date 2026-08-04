@@ -1,0 +1,24 @@
+{
+  "provider": "luma-labs",
+  "sources": [
+    "luma-labs-concepts-api-openapi.yml",
+    "luma-labs-credits-api-openapi.yml",
+    "luma-labs-generations-api-openapi.yml",
+    "luma-labs-image-api-openapi.yml",
+    "luma-labs-system-api-openapi.yml",
+    "luma-labs-video-api-openapi.yml"
+  ],
+  "outputs": [
+    "luma-labs-concepts-api-openapi.yml",
+    "luma-labs-credits-api-openapi.yml",
+    "luma-labs-generations-api-openapi.yml",
+    "luma-labs-image-api-openapi.yml",
+    "luma-labs-system-api-openapi.yml",
+    "luma-labs-video-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

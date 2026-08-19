@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Luma Dream Machine Concepts API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Concepts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available concepts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/concepts/list"
+          },
+          "docs": "List available concepts"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

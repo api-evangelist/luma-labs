@@ -1,0 +1,127 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Luma Dream Machine Concepts Generations API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Generations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List generations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List generations"
+        },
+        {
+          "info": {
+            "name": "Retrieve a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a generation"
+        },
+        {
+          "info": {
+            "name": "Delete a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a generation"
+        },
+        {
+          "info": {
+            "name": "Upscale a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id/upscale",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upscale a generation"
+        },
+        {
+          "info": {
+            "name": "Add audio to a generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/:id/audio",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add audio to a generation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

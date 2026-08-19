@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Luma Dream Machine Concepts Image API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Image",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an image generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/image",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an image generation"
+        },
+        {
+          "info": {
+            "name": "Reframe an image",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/image/reframe",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Reframe an image"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

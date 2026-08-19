@@ -1,0 +1,45 @@
+# Luma APIs Documentation
+
+> Make your imagination reality with AI. From Luma AI.
+
+## Guides
+- [Welcome](https://docs.lumalabs.ai/docs/welcome.md): Build and scale creative products with the world's most popular and intuitive generation models using the Dream Machine API
+- [API](https://docs.lumalabs.ai/docs/api.md): Use the API directly
+- [Image Generation](https://docs.lumalabs.ai/docs/image-generation.md)
+- [Video Generation](https://docs.lumalabs.ai/docs/video-generation.md)
+- [Python SDK](https://docs.lumalabs.ai/docs/python.md): https://github.com/lumalabs/lumaai-python
+- [Image Generation](https://docs.lumalabs.ai/docs/python-image-generation.md)
+- [Video Generation](https://docs.lumalabs.ai/docs/python-video-generation.md)
+- [JavaScript SDK](https://docs.lumalabs.ai/docs/javascript.md): https://github.com/lumalabs/lumaai-node
+- [Image Generation](https://docs.lumalabs.ai/docs/javascript-image-generation.md)
+- [Video Generation](https://docs.lumalabs.ai/docs/javascript-video-generation.md)
+- [Rate Limits](https://docs.lumalabs.ai/docs/rate-limits.md)
+- [Errors](https://docs.lumalabs.ai/docs/errors.md): These are the possible error messages from Dream Machine API
+- [FAQ](https://docs.lumalabs.ai/docs/faq.md)
+- [Reframe](https://docs.lumalabs.ai/docs/reframe-video-image.md)
+- [Modify Video](https://docs.lumalabs.ai/docs/modify-video.md)
+
+## API Reference
+- [Ping](https://docs.lumalabs.ai/reference/ping.md)
+- [Ping](https://docs.lumalabs.ai/reference/ping-1.md): Check if the API is running
+- [Generations](https://docs.lumalabs.ai/reference/generations.md)
+- [Create a generation](https://docs.lumalabs.ai/reference/creategeneration.md): Initiate a new generation with the provided prompt
+- [List generations](https://docs.lumalabs.ai/reference/listgenerations.md): Retrieve a list of generations with optional filtering and sorting
+- [Get a generation](https://docs.lumalabs.ai/reference/getgeneration.md): Retrieve details of a specific generation by its ID
+- [Delete a generation](https://docs.lumalabs.ai/reference/deletegeneration.md): Remove a specific generation by its ID
+- [Upscale a generation](https://docs.lumalabs.ai/reference/upscalegeneration.md): Upscale a generation by its ID
+- [Add audio to a generation](https://docs.lumalabs.ai/reference/addaudiotogeneration.md): Add audio to a generation by its ID
+- [Get concepts](https://docs.lumalabs.ai/reference/getconcepts.md): Get all possible concepts
+- [Generate an image](https://docs.lumalabs.ai/reference/generateimage.md): Generate an image with the provided prompt
+- [Reframe an image](https://docs.lumalabs.ai/reference/reframeimage.md): Reframe an image by its ID
+- [Reframe a video](https://docs.lumalabs.ai/reference/reframevideo.md): Reframe a video by its ID
+- [Modify a video](https://docs.lumalabs.ai/reference/modifyvideo.md): Modify a video with style transfer and prompt-based editing
+- [Credits](https://docs.lumalabs.ai/reference/credits.md)
+- [Get credits](https://docs.lumalabs.ai/reference/getcredits.md): Get the credits information for the api user
+
+## Changelog
+- [Camera Concepts](https://docs.lumalabs.ai/changelog/concepts.md)
+- [Upscale up to 4K, Progress updates](https://docs.lumalabs.ai/changelog/upscale.md)
+- [Photon & Photon Flash API](https://docs.lumalabs.ai/changelog/luma-photon-photon-flash-api.md)
+- [Callbacks & Credits Balance](https://docs.lumalabs.ai/changelog/callbacks-and-credits-balance.md)
+- [Launch](https://docs.lumalabs.ai/changelog/launch.md)

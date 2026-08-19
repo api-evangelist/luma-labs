@@ -1,0 +1,69 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Luma Dream Machine Concepts Video API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Video",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a video generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a video generation"
+        },
+        {
+          "info": {
+            "name": "Modify a video with style transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video/modify",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Modify a video with style transfer"
+        },
+        {
+          "info": {
+            "name": "Reframe a video",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video/reframe",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Reframe a video"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

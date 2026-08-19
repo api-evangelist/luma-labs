@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "0c83edd8-90be-4ed4-b1e5-2a67f4aec72c",
+      "name": "Concepts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d985cdf9-c504-4c90-a45d-8f0f991aedef",
+          "name": "List available concepts",
+          "request": {
+            "name": "List available concepts",
+            "description": {},
+            "url": {
+              "path": [
+                "generations",
+                "concepts",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "20c59300-3860-4156-9d4a-b9fff9baa537",
+              "name": "A list of concepts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "generations",
+                    "concepts",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.lumalabs.ai/dream-machine/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c3045f66-92d5-45e6-a207-e1c40955b428",
+    "name": "Luma Dream Machine Concepts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Luma's Dream Machine generative video and image platform.\nExposes Ray (video) and Photon (image) model families with endpoints for\ncreating, listing, retrieving, and deleting generations, plus upscaling,\nstyle-transfer modification, reframing, audio attachment, concepts, and\ncredit balance.\nAuthentication uses Bearer tokens obtained from\nhttps://lumalabs.ai/dream-machine/api/keys.\n\n\nContact Support:\n Name: Luma Labs",
+      "type": "text/plain"
+    }
+  }
+}

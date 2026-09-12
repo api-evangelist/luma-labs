@@ -1,15 +1,6 @@
 aid: luma-labs
 name: Luma AI
-description: >-
-  Luma AI is a generative media company best known for Dream Machine, a
-  family of image and video models including Ray (video), Photon and
-  Photon Flash (image). The Dream Machine API gives developers access to
-  text-to-video, image-to-video, image generation, upscaling, video
-  modification with style transfer, reframing, audio attachment, and
-  concept controls. Luma serves creators, agencies, and product teams
-  building generative media features, and monetizes through consumer
-  subscription tiers (Plus, Pro, Ultra), team and enterprise plans, and a
-  credit-based developer API.
+description: Luma AI is a generative media company best known for Dream Machine, a family of image and video models including Ray (video), Photon and Photon Flash (image). The Dream Machine API gives developers access to text-to-video, image-to-video, image generation, upscaling, video modification with style transfer, reframing, audio attachment, and concept controls. Luma serves creators, agencies, and product teams building generative media features, and monetizes through consumer subscription tiers (Plus, Pro, Ultra), team and enterprise plans, and a credit-based developer API.
 type: Index
 deliveryModel:
   model: saas
@@ -41,31 +32,31 @@ position: Producing
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luma-labs.png
 tags:
-  - Artificial Intelligence
-  - Generative AI
-  - Video
-  - Image
-  - Text-to-Video
-  - Image-to-Video
-  - Upscaling
-  - Reframing
-  - Dream Machine
-  - Ray
-  - Photon
-  - Creative Tools
+- Artificial Intelligence
+- Generative AI
+- Video
+- Image
+- Text-to-Video
+- Image-to-Video
+- Upscaling
+- Reframing
+- Dream Machine
+- Ray
+- Photon
+- Creative Tools
 tags_raw:
-  - Artificial Intelligence
-  - Generative AI
-  - Video
-  - Image
-  - Text To Video
-  - Image To Video
-  - Upscaling
-  - Reframing
-  - Dream Machine
-  - Ray
-  - Photon
-  - Creative Tools
+- Artificial Intelligence
+- Generative AI
+- Video
+- Image
+- Text To Video
+- Image To Video
+- Upscaling
+- Reframing
+- Dream Machine
+- Ray
+- Photon
+- Creative Tools
 url: https://raw.githubusercontent.com/api-evangelist/luma-labs/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
@@ -73,11 +64,7 @@ specificationVersion: '0.23'
 apis:
 - aid: luma-labs:dream-machine-api
   name: Luma Dream Machine API
-  description: >-
-    The Dream Machine API exposes Luma's Ray and Photon model families for programmatic image and video
-    generation. It provides endpoints for creating, listing, retrieving, and deleting generations, generating
-    images, upscaling, modifying video with style transfer, reframing, attaching audio, and checking credits.
-    SDKs for Python and JavaScript wrap the REST API.
+  description: The Dream Machine API exposes Luma's Ray and Photon model families for programmatic image and video generation. It provides endpoints for creating, listing, retrieving, and deleting generations, generating images, upscaling, modifying video with style transfer, reframing, attaching audio, and checking credits. SDKs for Python and JavaScript wrap the REST API.
   humanURL: https://docs.lumalabs.ai/
   baseURL: https://api.lumalabs.ai/dream-machine/v1
   tags:
@@ -106,8 +93,7 @@ apis:
     url: https://docs.lumalabs.ai/docs/authentication
   features:
   - name: Create Generation
-    description: >-
-      Submit prompts to initiate text-to-video or image-to-video jobs using Ray model variants.
+    description: Submit prompts to initiate text-to-video or image-to-video jobs using Ray model variants.
   - name: Image Generation
     description: Generate still images with Photon and Photon Flash from text prompts.
   - name: Upscaling
@@ -145,9 +131,7 @@ apis:
   - name: Discord
   authentication:
   - type: API Key
-    description: >-
-      API keys are generated at lumalabs.ai/dream-machine/api/keys and passed as a Bearer token in the
-      Authorization header.
+    description: API keys are generated at lumalabs.ai/dream-machine/api/keys and passed as a Bearer token in the Authorization header.
 - aid: luma-labs:luma-labs-concepts-api
   name: Luma AI Concepts API
   description: The Concepts API from Luma AI — 1 operation(s) for concepts.
@@ -208,35 +192,52 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/luma-labs-video-api-openapi.yml
-common:
-  - type: AgenticAccess
-    url: agentic-access/luma-labs-agentic-access.yml
-  - type: DomainSecurity
-    url: security/luma-labs-domain-security.yml
-  - type: Authentication
-    url: authentication/luma-labs-authentication.yml
-  - type: Website
-    url: https://lumalabs.ai
+- aid: luma-labs:agents-uni
+  name: Luma Agents API (uni-1)
+  description: Agent-style image generation/editing with a reasoning endpoint and a generation endpoint. Uses /v1/generations submit and /v1/generations/{generation_id} polling pattern at https://agents.lumalabs.ai/v1.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.agents.lumalabs.ai/
+  baseURL: https://agents.lumalabs.ai/v1
+  tags:
+  - Agents
+  - Image-Generation
+  - Image Editing
+  tags_raw:
+  - Agents
+  - Image Generation
+  - Image Editing
+  properties:
   - type: Documentation
-    url: https://docs.lumalabs.ai
-  - type: Blog
-    url: https://lumalabs.ai/blog
-  - type: GitHubOrganization
-    url: https://github.com/lumalabs
-  - type: Pricing
-    url: https://lumalabs.ai/pricing
-  - type: TermsOfService
-    url: https://lumalabs.ai/legal/tos
-  - type: PrivacyPolicy
-    url: https://lumalabs.ai/legal/privacy-policy
-  - type: X
-    url: https://x.com/LumaLabsAI
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/luma-ai
-  - type: Discord
-    url: https://discord.gg/lumalabs
-  - type: LlmsText
-    url: https://docs.lumalabs.ai/llms.txt
+    url: https://docs.agents.lumalabs.ai/
+common:
+- type: AgenticAccess
+  url: agentic-access/luma-labs-agentic-access.yml
+- type: DomainSecurity
+  url: security/luma-labs-domain-security.yml
+- type: Authentication
+  url: authentication/luma-labs-authentication.yml
+- type: Website
+  url: https://lumalabs.ai
+- type: Documentation
+  url: https://docs.lumalabs.ai
+- type: Blog
+  url: https://lumalabs.ai/blog
+- type: GitHubOrganization
+  url: https://github.com/lumalabs
+- type: Pricing
+  url: https://lumalabs.ai/pricing
+- type: TermsOfService
+  url: https://lumalabs.ai/legal/tos
+- type: PrivacyPolicy
+  url: https://lumalabs.ai/legal/privacy-policy
+- type: X
+  url: https://x.com/LumaLabsAI
+- type: LinkedIn
+  url: https://www.linkedin.com/company/luma-ai
+- type: Discord
+  url: https://discord.gg/lumalabs
+- type: LlmsText
+  url: https://docs.lumalabs.ai/llms.txt
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

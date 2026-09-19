@@ -148,6 +148,8 @@ apis:
   humanURL: https://docs.lumalabs.ai/
   baseURL: https://api.lumalabs.ai/dream-machine/v1
   tags:
+  - Credit
+  tags_raw:
   - Credits
   properties:
   - type: OpenAPI

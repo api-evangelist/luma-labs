@@ -1,12 +1,7 @@
 {
   "provider": "luma-labs",
   "sources": [
-    "luma-labs-concepts-api-openapi.yml",
-    "luma-labs-credits-api-openapi.yml",
-    "luma-labs-generations-api-openapi.yml",
-    "luma-labs-image-api-openapi.yml",
-    "luma-labs-system-api-openapi.yml",
-    "luma-labs-video-api-openapi.yml"
+    "_original/luma-labs-openapi.yml"
   ],
   "outputs": [
     "luma-labs-concepts-api-openapi.yml",
@@ -19,6 +14,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "luma-labs-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "luma-labs-concepts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "luma-labs-credits-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "luma-labs-generations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "luma-labs-image-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "luma-labs-system-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "luma-labs-video-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

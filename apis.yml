@@ -202,12 +202,13 @@ apis:
   baseURL: https://agents.lumalabs.ai/v1
   tags:
   - Agents
-  - Image-Generation
+  - Image Generation
   - Image Editing
   tags_raw:
   - Agents
   - Image Generation
   - Image Editing
+  - Image-Generation
   properties:
   - type: Documentation
     url: https://docs.agents.lumalabs.ai/

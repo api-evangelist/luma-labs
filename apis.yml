@@ -216,6 +216,12 @@ apis:
   - type: Documentation
     url: https://docs.agents.lumalabs.ai/
 common:
+- type: Plans
+  url: plans/luma-labs-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/luma-labs-rate-limits.yml
+- type: FinOps
+  url: finops/luma-labs-finops.yml
 - type: AgenticAccess
   url: agentic-access/luma-labs-agentic-access.yml
 - type: DomainSecurity

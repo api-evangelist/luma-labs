@@ -60,3 +60,22 @@ plans:
 references:
 - name: Luma AI API Documentation
   url: https://raw.githubusercontent.com/api-evangelist/luma-labs/refs/heads/main/apis.yml
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - rate
+  - request
+  plans:
+  - name: Free
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - rate
+    - request
+    periods:
+    - minute
+    - month

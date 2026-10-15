@@ -1,0 +1,50 @@
+edges:
+- partner_name: C2PA (Content Credentials conformance programme)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://github.com/c2pa-org/conformance-public/blob/main/conforming-products/conforming-products-list.json
+  category: content provenance (Content Credentials) conformance
+  contract_reference:
+    register: C2PA conforming products list (c2pa-org/conformance-public)
+    spec_file: null
+    role: c2pa-conformant-applicant
+    registered_name: Luma AI, Inc.
+    register_id: Luma AI, Inc.
+    product_types:
+    - generatorProduct
+    assurance_levels:
+    - 1
+    spec_versions:
+    - '2.2'
+    media_types:
+    - audio/mpeg
+    - audio/wav
+    - image/gif
+    - image/jpeg
+    - image/png
+    - image/webp
+    - video/mp4
+    products:
+    - product: Luma
+      record_id: 01a01b59-ea6c-70d5-9ea5-931d801bb7d5
+      conformance_date: '2026-10-08'
+    matched_domain: lumalabs.ai
+    matched_by: domain+verified
+    identity: wikidata Q133140937 'Luma AI (Luma Agents)' P856 https://lumalabs.ai/
+    detected_by: sweep-media.py
+    detected: '2026-10-15'
+    verified: C2PA applicant 'Luma AI, Inc.'; all/luma-labs is named 'Luma AI', Website lumalabs.ai
+  detected_by: sweep-media.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+source:
+- https://ddex.net/membership/current-members/
+- https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json
+checked:
+- https://ddex.net/membership/current-members/
+- https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json

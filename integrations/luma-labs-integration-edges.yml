@@ -40,6 +40,35 @@ edges:
     verified: C2PA applicant 'Luma AI, Inc.'; all/luma-labs is named 'Luma AI', Website lumalabs.ai
   detected_by: sweep-media.py
   first_seen: '2026-10-15'
+- partner_name: Andreessen Horowitz (a16z)
+  partner: a16z
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://a16z.com/companies/luma-ai/
+  category: vc portfolio participation
+  contract_reference:
+    register: a16z portfolio (a16z.com/portfolio/, the page's own data-companies JSON)
+    standard: null
+    spec_file: null
+    role: vc-portfolio-company
+    registered_name: Luma AI
+    register_id: https://a16z.com/companies/luma-ai/
+    register_country: null
+    register_website: https://lumalabs.ai
+    matched_domain: lumalabs.ai
+    matched_by: domain+hand-verified-name
+    signal_note: 'participation only: the venture firm''s own published portfolio lists the company (investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-vc-portfolios.py
+    detected: '2026-10-21'
+    year: '2023'
+    status: Active
+    sector: Consumer;Infra
+  detected_by: sweep-vc-portfolios.py
+  first_seen: '2026-10-21'
 generated: '2026-10-15'
 method: searched
 source:
@@ -48,3 +77,9 @@ source:
 checked:
 - https://ddex.net/membership/current-members/
 - https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json
+- https://a16z.com/portfolio/
+- https://www.battery.com/company/
+- https://www.battery.com/wp-admin/admin-ajax.php
+- https://www.indexventures.com/companies/
+- https://www.sequoiacap.com/our-companies/
+- https://www.sequoiacap.com/sitemap.xml
